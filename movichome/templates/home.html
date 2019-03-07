@@ -1,0 +1,14 @@
+{% extends 'header.html' %}
+
+
+{% block body%}
+<section id="keyword">
+    <div class="container">
+      <h1>Pencarian Perkataan Melayu</h1>
+      <form action="{% url 'search:result' %}" role="form" method="POST">
+        {% csrf_token %}
+        <input type="text" name="userkeyword" size="30"><button type="submit">KLIK!</button>
+      </form>
+    </div>
+  </section> 
+{% endblock %}

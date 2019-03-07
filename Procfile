@@ -1,0 +1,1 @@
+web: gunicorn movicsite.wsgi --log-file -

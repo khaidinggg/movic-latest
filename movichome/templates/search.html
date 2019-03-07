@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charser="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Malay Online Virtual Integrated Corpus">
+    <title>Movic | Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
+  </head>
+  <body>
+      <header>
+          <div class="container">
+            <div id="branding">
+              <h1><span class="highlight">Malay</span> Online Virtual Integrated Corpus</h1>
+            </div>
+            <nav>
+              <ul>
+                <li class="current"><a href="http://127.0.0.1:8000/home">Home</a></li>
+                <li><a href="http://127.0.0.1:8000/about">About</a></li>
+                <li><a href="http://127.0.0.1:8000/feedback">Feedback</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+{% block body %}
+<div>
+    {% if desc %}
+        {% for page in desc%}
+        <div>
+            Keputusan Carian 
+            <p>{{page.description}}</p>
+            Keputusan Carian
+            <p>{{page.description_2}}</p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>No result found!</h1>
+    {% endif%}
+    <a href="http://127.0.0.1:8000/home">HOME</a>
+</div>
+{% endblock %}
