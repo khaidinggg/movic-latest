@@ -4,3 +4,4 @@ gunicorn
 django-heroku
 selenium
 google-chrome
+django-tastypie
