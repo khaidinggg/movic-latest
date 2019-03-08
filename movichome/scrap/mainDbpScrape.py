@@ -28,7 +28,8 @@ class dbp:
 
         #Scrape the data and display and done!
         element = driver.find_element_by_xpath('//*[@id="MainContent_cmd_search"]').click()
-        word_definition = driver.find_element_by_xpath('//*[@id="1"]')
+        word_definition = driver.find_element_by_xpath('//*[@id="MainContent_panels"]')
+        #word_definition = driver.find_element_by_xpath('//*[@id="1"]')
         dbpDefinition = word_definition.text
         
         print("Result dia "+dbpDefinition)

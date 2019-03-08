@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from movichome import views
+from django.conf.urls import url, include
+from api.resources import ScrapResource
+
+scrap_resource = ScrapResource()
 
 urlpatterns = [
     #path("", hello.views.index, name="index"),
@@ -24,4 +28,9 @@ urlpatterns = [
     path('feedback', views.feedback), 
     path('search', include('movichome.url')),
     path('admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(scrap_resource.urls)),
 ]
+
+
+
