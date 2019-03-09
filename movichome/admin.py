@@ -7,11 +7,14 @@ class ScrapeAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['text_id']}),
         (None,               {'fields': ['title']}),
-        ('Test', {'fields': ['description'], 'classes': ['collapse']}),
+        ('Test', {'fields': ['DBPDefinition'], 'classes': ['collapse']}),
+        ('Test', {'fields': ['peribahasa'], 'classes': ['collapse']}),
+        ('Test', {'fields': ['pantun'], 'classes': ['collapse']}),
+        ('Test', {'fields': ['MCPList'], 'classes': ['collapse']}),
         ('Test', {'fields': ['description_2'], 'classes': ['collapse']}),
     ]
     
-    list_display = ('text_id', 'title', 'description', 'description_2')
+    list_display = ('text_id', 'title', 'DBPDefinition', 'peribahasa', 'pantun', 'MCPList', 'description_2')
 
 
 

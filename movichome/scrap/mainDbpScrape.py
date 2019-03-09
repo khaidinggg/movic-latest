@@ -11,7 +11,7 @@ class dbp:
         # userkeyword = input("\nEnter keyword to search here : ")
         # print(userkeyword)
 
-        dbpDefinition = ""
+        
         
 
         options = webdriver.ChromeOptions()
@@ -28,12 +28,18 @@ class dbp:
 
         #Scrape the data and display and done!
         element = driver.find_element_by_xpath('//*[@id="MainContent_cmd_search"]').click()
-        word_definition = driver.find_element_by_xpath('//*[@id="MainContent_panels"]')
         #word_definition = driver.find_element_by_xpath('//*[@id="1"]')
+        dbpDefinition = ""
+        word_definition = driver.find_element_by_xpath('//*[@id="MainContent_panels"]')
         dbpDefinition = word_definition.text
+
+        dbpPeribahasa = ""
+        word_peribahasa = driver.find_element_by_xpath('//*[@id="MainContent_SearchInfoPeribahasa_lblPeribahasa"]')
+        dbpPeribahasa = word_peribahasa.text
         
-        print("Result dia "+dbpDefinition)
-        models.PageScrape.objects.create(description=dbpDefinition)
+        print("DBP Definition : "+dbpDefinition)
+        print("\n\nDBP Peribahasa : "+dbpPeribahasa)
+        models.PageScrape.objects.create(DBPDefinition=dbpDefinition,title=userkeyword, peribahasa=dbpPeribahasa, MCPList="dummy data" )
         return dbpDefinition
 
 
