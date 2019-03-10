@@ -39,7 +39,7 @@ class dbp:
         
         print("DBP Definition : "+dbpDefinition)
         print("\n\nDBP Peribahasa : "+dbpPeribahasa)
-        models.PageScrape.objects.create(DBPDefinition=dbpDefinition,title=userkeyword, peribahasa=dbpPeribahasa, MCPList="dummy data" )
+        models.DBPScrape.objects.create(DBPDefinition=dbpDefinition,title=userkeyword, peribahasa=dbpPeribahasa, pub_date_dbp="test" )
         return dbpDefinition
 
 

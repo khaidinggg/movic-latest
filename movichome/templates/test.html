@@ -1,0 +1,27 @@
+/*
+    {% if desc1 %}
+        {% for page1,page2,page3 in desc1, desc2, desc3%}
+        <div>
+            Carian :
+            <p>{{page1.title}}</p>
+            Maksud:
+            <p>{{page.DBPDefinition}}</p> 
+            Peribahasa: 
+            <p>{{page.peribahasa}}</p>
+            Keputusan Carian 
+            <p>{{page.MCPList}}</p>            
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>No result found!</h1>
+    {% endif%}
+    */
+
+
+    {% if desc3.MCPList %}
+                    {% for line1 in desc3.MCPList %}
+                        {{desc3.MCPList}}
+                    {% endfor %}
+                    {% else %}
+                        <h1>No result found!</h1>
+                {% endif%}
