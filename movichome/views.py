@@ -20,15 +20,15 @@ def result(request):
     #PageScrape.objects.all().delete()
     userinput = request.POST.get('userkeyword', None)
     userkeywords = userinput
-    #models.PageScrape.objects.create(title=userkeywords)
+    models.PageScrape.objects.create(title=userkeywords)
 
     #website satu
     dpbresult = mainDbpScrape.dbp()
-    #dpbresult.scrapeItem(userkeywords)
+    dpbresult.scrapeItem(userkeywords)
 
     #website dua
     mcpresult = mainMcpScrape.mcp()
-    #mcpresult.scrapeItem(userkeywords)
+    mcpresult.scrapeItem(userkeywords)
 
     item1 = PageScrape.objects.all()
     item2 = DBPScrape.objects.all()
