@@ -40,11 +40,11 @@ class mcp:
             
 
         #Scrape the data and display(words_text)
-        #words_texts = driver.find_element_by_xpath('//*[@id="wrap2"]/div[4]/pre')
-        #print(words_texts.text)
+        words_texts = driver.find_element_by_xpath('//*[@id="wrap2"]/div[4]/pre')
+        print(words_texts.text)
 
         mcpDefinition_1 = words_list.text
-        #mcpDefinition_2 = words_texts.text
+        mcpDefinition_2 = words_texts.text
         #models.MCPScrape.objects.create(title=userkeyword, MCPList=mcpDefinition_1,description_2=mcpDefinition_2, pub_date_mcp="test")
-        models.MCPScrape.objects.create(title=userkeyword, MCPList=mcpDefinition_1, pub_date_mcp="test")
+        models.MCPScrape.objects.create(title=userkeyword, MCPList=mcpDefinition_1, description_2=mcpDefinition_2, pub_date_mcp="test")
         return

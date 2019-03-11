@@ -57,20 +57,24 @@ tr:nth-child(even) {
     <td>{{desc1.title}}</td>
   </tr>
   <tr>
-    <td>Maksud</td>
-    <td>{{desc2.DBPDefinition}}</td>
+    <td>Tesaurus</td>
+    <td><pre>{{desc2.DBPDefinition}}</pre></td>
   </tr>
   <tr>
     <td>Peribahasa</td>
-    <td>{{desc2.peribahasa}}</td>
+    <td><pre>{{desc2.peribahasa}}</pre></td>
   </tr>
   <tr>
-    <td>Konkordancs</td>
-    <td>{{desc3.MCPList}}</td>
+    <td>Konkordans</td>
+    <td><pre>{{desc3.MCPList}}</pre></td>
+  </tr>
+  <tr>
+    <td>Contoh Ayat</td>
+    <td><pre>{{desc3.description_2}}</pre></td>
   </tr>
 		</table>
 
-		<div>
+		      <div>
             Carian :
             <p>{{desc1.title}}</p>
             Maksud:
@@ -79,9 +83,10 @@ tr:nth-child(even) {
             <p>{{desc2.peribahasa}}</p>
             Keputusan Carian 
             <p>
+            
             	{{desc3.MCPList}}
-
-        	</p>            
+            
+          	</p>            
         </div>
 
 

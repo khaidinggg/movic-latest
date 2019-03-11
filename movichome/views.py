@@ -35,11 +35,16 @@ def result(request):
     item3 = MCPScrape.objects.all()
 
     print(item1.count() , item2.count(), item3.count())
+    
 
 
     #currentItem = item1.count()
     currentItem1 = item1.count()
     currentItem2 = item2.count()
     currentItem3 = item3.count()
+
+    myList = item3[currentItem1-1]
+
+    print(myList.MCPList)
 
     return render(request, 'search.html', {'desc1': item1[currentItem1-1], 'desc2': item2[currentItem2-1], 'desc3': item3[currentItem3-1]})
