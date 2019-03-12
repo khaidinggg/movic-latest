@@ -26,6 +26,7 @@ class mcp:
 
         #find the checkbox and tick
         element = driver.find_element_by_xpath('//*[@id="wrap2"]/x/form/div/div[1]/table/tbody/tr[1]/td[2]/input').click()
+        #element = driver.find_element_by_xpath('//*[@id="wrap2"]/x/form/div/div[2]/table/tbody/tr[2]/td[4]/input[2]').click()
 
         #find the search box and send keys
         element = driver.find_element_by_xpath('//*[@id="wrap2"]/x/form/div/div[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/input')
@@ -34,6 +35,9 @@ class mcp:
 
         #Scrape the data and display
         words_list = driver.find_element_by_xpath('//*[@id="wrap2"]/div[2]/pre')
+
+        #longer text
+        #words_list = driver.find_element_by_xpath('//*[@id="wrap2"]/dl[2]/dd/table')
         print(words_list.text)
 
         #for i in words_list():
@@ -41,6 +45,9 @@ class mcp:
 
         #Scrape the data and display(words_text)
         words_texts = driver.find_element_by_xpath('//*[@id="wrap2"]/div[4]/pre')
+
+        #longer text
+        #words_texts = driver.find_element_by_xpath('//*[@id="wrap2"]/div[3]')
         print(words_texts.text)
 
         mcpDefinition_1 = words_list.text
